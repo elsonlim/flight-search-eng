@@ -1,0 +1,721 @@
+[{
+    "id": 0,
+    "IATA": "AAL",
+    "flightNo": 180,
+    "from": "USA",
+    "to": "TWN",
+    "price": {
+        "amount": 791,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 2226,
+        "departure": 2035,
+        "duration": 111
+    }
+}, {
+    "id": 1,
+    "IATA": "AAL",
+    "flightNo": 181,
+    "from": "TWN",
+    "to": "USA",
+    "price": {
+        "amount": 871,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1632,
+        "departure": 1215,
+        "duration": 257
+    }
+}, {
+    "id": 2,
+    "IATA": "AAL",
+    "flightNo": 726,
+    "from": "USA",
+    "to": "JPN",
+    "price": {
+        "amount": 559,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1221,
+        "departure": 840,
+        "duration": 221
+    }
+}, {
+    "id": 3,
+    "IATA": "AAL",
+    "flightNo": 727,
+    "from": "JPN",
+    "to": "USA",
+    "price": {
+        "amount": 513,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 439,
+        "departure": 100,
+        "duration": 219
+    }
+}, {
+    "id": 4,
+    "IATA": "AAL",
+    "flightNo": 596,
+    "from": "USA",
+    "to": "AUS",
+    "price": {
+        "amount": 857,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 725,
+        "departure": 405,
+        "duration": 200
+    }
+}, {
+    "id": 5,
+    "IATA": "AAL",
+    "flightNo": 597,
+    "from": "AUS",
+    "to": "USA",
+    "price": {
+        "amount": 947,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 130,
+        "departure": 2145,
+        "duration": 225
+    }
+}, {
+    "id": 6,
+    "IATA": "QAN",
+    "flightNo": 827,
+    "from": "AUS",
+    "to": "SGP",
+    "price": {
+        "amount": 512,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 937,
+        "departure": 545,
+        "duration": 232
+    }
+}, {
+    "id": 7,
+    "IATA": "QAN",
+    "flightNo": 828,
+    "from": "SGP",
+    "to": "AUS",
+    "price": {
+        "amount": 558,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1231,
+        "departure": 925,
+        "duration": 186
+    }
+}, {
+    "id": 8,
+    "IATA": "QAN",
+    "flightNo": 128,
+    "from": "AUS",
+    "to": "SGP",
+    "price": {
+        "amount": 865,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 323,
+        "departure": 10,
+        "duration": 193
+    }
+}, {
+    "id": 9,
+    "IATA": "QAN",
+    "flightNo": 129,
+    "from": "SGP",
+    "to": "AUS",
+    "price": {
+        "amount": 921,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 601,
+        "departure": 205,
+        "duration": 236
+    }
+}, {
+    "id": 10,
+    "IATA": "QAN",
+    "flightNo": 957,
+    "from": "AUS",
+    "to": "JPN",
+    "price": {
+        "amount": 915,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1814,
+        "departure": 1450,
+        "duration": 204
+    }
+}, {
+    "id": 11,
+    "IATA": "QAN",
+    "flightNo": 958,
+    "from": "JPN",
+    "to": "AUS",
+    "price": {
+        "amount": 894,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 814,
+        "departure": 500,
+        "duration": 194
+    }
+}, {
+    "id": 12,
+    "IATA": "SQ",
+    "flightNo": 768,
+    "from": "SGP",
+    "to": "USA",
+    "price": {
+        "amount": 334,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 312,
+        "departure": 2340,
+        "duration": 212
+    }
+}, {
+    "id": 13,
+    "IATA": "SQ",
+    "flightNo": 769,
+    "from": "USA",
+    "to": "SGP",
+    "price": {
+        "amount": 428,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 2342,
+        "departure": 2200,
+        "duration": 102
+    }
+}, {
+    "id": 14,
+    "IATA": "SQ",
+    "flightNo": 271,
+    "from": "SGP",
+    "to": "JPN",
+    "price": {
+        "amount": 577,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1518,
+        "departure": 1225,
+        "duration": 173
+    }
+}, {
+    "id": 15,
+    "IATA": "SQ",
+    "flightNo": 272,
+    "from": "JPN",
+    "to": "SGP",
+    "price": {
+        "amount": 656,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1152,
+        "departure": 845,
+        "duration": 187
+    }
+}, {
+    "id": 16,
+    "IATA": "SQ",
+    "flightNo": 352,
+    "from": "SGP",
+    "to": "VNM",
+    "price": {
+        "amount": 994,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1214,
+        "departure": 855,
+        "duration": 199
+    }
+}, {
+    "id": 17,
+    "IATA": "SQ",
+    "flightNo": 353,
+    "from": "VNM",
+    "to": "SGP",
+    "price": {
+        "amount": 1069,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1346,
+        "departure": 935,
+        "duration": 251
+    }
+}, {
+    "id": 18,
+    "IATA": "CX",
+    "flightNo": 814,
+    "from": "HKG",
+    "to": "JPN",
+    "price": {
+        "amount": 524,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 440,
+        "departure": 145,
+        "duration": 175
+    }
+}, {
+    "id": 19,
+    "IATA": "CX",
+    "flightNo": 815,
+    "from": "JPN",
+    "to": "HKG",
+    "price": {
+        "amount": 509,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1223,
+        "departure": 910,
+        "duration": 193
+    }
+}, {
+    "id": 20,
+    "IATA": "CX",
+    "flightNo": 487,
+    "from": "HKG",
+    "to": "JPN",
+    "price": {
+        "amount": 582,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 431,
+        "departure": 145,
+        "duration": 166
+    }
+}, {
+    "id": 21,
+    "IATA": "CX",
+    "flightNo": 488,
+    "from": "JPN",
+    "to": "HKG",
+    "price": {
+        "amount": 588,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 2106,
+        "departure": 1735,
+        "duration": 211
+    }
+}, {
+    "id": 22,
+    "IATA": "CX",
+    "flightNo": 793,
+    "from": "HKG",
+    "to": "USA",
+    "price": {
+        "amount": 242,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1840,
+        "departure": 1705,
+        "duration": 95
+    }
+}, {
+    "id": 23,
+    "IATA": "CX",
+    "flightNo": 794,
+    "from": "USA",
+    "to": "HKG",
+    "price": {
+        "amount": 217,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1,
+        "departure": 1950,
+        "duration": 251
+    }
+}, {
+    "id": 24,
+    "IATA": "JAL",
+    "flightNo": 583,
+    "from": "JPN",
+    "to": "VNM",
+    "price": {
+        "amount": 166,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 758,
+        "departure": 345,
+        "duration": 253
+    }
+}, {
+    "id": 25,
+    "IATA": "JAL",
+    "flightNo": 584,
+    "from": "VNM",
+    "to": "JPN",
+    "price": {
+        "amount": 202,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1426,
+        "departure": 1155,
+        "duration": 151
+    }
+}, {
+    "id": 26,
+    "IATA": "JAL",
+    "flightNo": 387,
+    "from": "JPN",
+    "to": "VNM",
+    "price": {
+        "amount": 625,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 642,
+        "departure": 420,
+        "duration": 142
+    }
+}, {
+    "id": 27,
+    "IATA": "JAL",
+    "flightNo": 388,
+    "from": "VNM",
+    "to": "JPN",
+    "price": {
+        "amount": 665,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1922,
+        "departure": 1640,
+        "duration": 162
+    }
+}, {
+    "id": 28,
+    "IATA": "JAL",
+    "flightNo": 95,
+    "from": "JPN",
+    "to": "HKG",
+    "price": {
+        "amount": 947,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1041,
+        "departure": 710,
+        "duration": 211
+    }
+}, {
+    "id": 29,
+    "IATA": "JAL",
+    "flightNo": 96,
+    "from": "HKG",
+    "to": "JPN",
+    "price": {
+        "amount": 1040,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1728,
+        "departure": 1345,
+        "duration": 223
+    }
+}, {
+    "id": 30,
+    "IATA": "ANA",
+    "flightNo": 183,
+    "from": "JPN",
+    "to": "TWN",
+    "price": {
+        "amount": 577,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 745,
+        "departure": 345,
+        "duration": 240
+    }
+}, {
+    "id": 31,
+    "IATA": "ANA",
+    "flightNo": 184,
+    "from": "TWN",
+    "to": "JPN",
+    "price": {
+        "amount": 670,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 221,
+        "departure": 45,
+        "duration": 96
+    }
+}, {
+    "id": 32,
+    "IATA": "ANA",
+    "flightNo": 713,
+    "from": "JPN",
+    "to": "VNM",
+    "price": {
+        "amount": 230,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1154,
+        "departure": 1040,
+        "duration": 74
+    }
+}, {
+    "id": 33,
+    "IATA": "ANA",
+    "flightNo": 714,
+    "from": "VNM",
+    "to": "JPN",
+    "price": {
+        "amount": 185,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1142,
+        "departure": 910,
+        "duration": 152
+    }
+}, {
+    "id": 34,
+    "IATA": "ANA",
+    "flightNo": 26,
+    "from": "JPN",
+    "to": "SGP",
+    "price": {
+        "amount": 633,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1531,
+        "departure": 1300,
+        "duration": 151
+    }
+}, {
+    "id": 35,
+    "IATA": "ANA",
+    "flightNo": 27,
+    "from": "SGP",
+    "to": "JPN",
+    "price": {
+        "amount": 534,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1034,
+        "departure": 805,
+        "duration": 149
+    }
+}, {
+    "id": 36,
+    "IATA": "BR",
+    "flightNo": 653,
+    "from": "TWN",
+    "to": "VNM",
+    "price": {
+        "amount": 791,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 341,
+        "departure": 150,
+        "duration": 111
+    }
+}, {
+    "id": 37,
+    "IATA": "BR",
+    "flightNo": 654,
+    "from": "VNM",
+    "to": "TWN",
+    "price": {
+        "amount": 769,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1237,
+        "departure": 850,
+        "duration": 227
+    }
+}, {
+    "id": 38,
+    "IATA": "BR",
+    "flightNo": 660,
+    "from": "TWN",
+    "to": "AUS",
+    "price": {
+        "amount": 742,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1828,
+        "departure": 1650,
+        "duration": 98
+    }
+}, {
+    "id": 39,
+    "IATA": "BR",
+    "flightNo": 661,
+    "from": "AUS",
+    "to": "TWN",
+    "price": {
+        "amount": 772,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1710,
+        "departure": 1335,
+        "duration": 215
+    }
+}, {
+    "id": 40,
+    "IATA": "BR",
+    "flightNo": 763,
+    "from": "TWN",
+    "to": "HKG",
+    "price": {
+        "amount": 993,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 2034,
+        "departure": 1850,
+        "duration": 104
+    }
+}, {
+    "id": 41,
+    "IATA": "BR",
+    "flightNo": 764,
+    "from": "HKG",
+    "to": "TWN",
+    "price": {
+        "amount": 1062,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 1103,
+        "departure": 825,
+        "duration": 158
+    }
+}, {
+    "id": 42,
+    "IATA": "EVA",
+    "flightNo": 948,
+    "from": "VNM",
+    "to": "HKG",
+    "price": {
+        "amount": 891,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 223,
+        "departure": 115,
+        "duration": 68
+    }
+}, {
+    "id": 43,
+    "IATA": "EVA",
+    "flightNo": 949,
+    "from": "HKG",
+    "to": "VNM",
+    "price": {
+        "amount": 808,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 144,
+        "departure": 2300,
+        "duration": 164
+    }
+}, {
+    "id": 44,
+    "IATA": "EVA",
+    "flightNo": 138,
+    "from": "VNM",
+    "to": "JPN",
+    "price": {
+        "amount": 978,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 509,
+        "departure": 235,
+        "duration": 154
+    }
+}, {
+    "id": 45,
+    "IATA": "EVA",
+    "flightNo": 139,
+    "from": "JPN",
+    "to": "VNM",
+    "price": {
+        "amount": 913,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 2254,
+        "departure": 1925,
+        "duration": 209
+    }
+}, {
+    "id": 46,
+    "IATA": "EVA",
+    "flightNo": 710,
+    "from": "VNM",
+    "to": "JPN",
+    "price": {
+        "amount": 325,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 2135,
+        "departure": 1725,
+        "duration": 250
+    }
+}, {
+    "id": 47,
+    "IATA": "EVA",
+    "flightNo": 711,
+    "from": "JPN",
+    "to": "VNM",
+    "price": {
+        "amount": 238,
+        "currency": "USD"
+    },
+    "time": {
+        "arrival": 2210,
+        "departure": 1755,
+        "duration": 255
+    }
+}]
