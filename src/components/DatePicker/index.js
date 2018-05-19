@@ -19,6 +19,7 @@ class DatePicker extends Component {
     
       onDateChange(date) {
         this.setState({ date });
+        this.props.onDateChange(date.toDate().toLocaleDateString())
       }
     
       onFocusChange({ focused }) {

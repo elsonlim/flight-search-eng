@@ -17,15 +17,16 @@ class SearchForm extends Component {
             from: null,
             to: null,
             depatureDate: null,
-            returnDate: null,
+            arrivalDate: null,
             numberOfPassengers: 1
         };
 
         this.setFrom = this.setFrom.bind(this);
         this.setTo = this.setTo.bind(this);
+        this.setPassengers = this.setPassengers.bind(this);
         this.filterFlights = this.filterFlights.bind(this);
-        this.onDateChange = this.onDateChange.bind(this);
-        this.onFocusChange = this.onFocusChange.bind(this);
+        this.setDepatureDate = this.setDepatureDate.bind(this);
+        this.setArrivalDate = this.setArrivalDate.bind(this);
     }
 
     setFrom(event, { value }) {
@@ -40,16 +41,33 @@ class SearchForm extends Component {
         })
     }
 
+    setPassengers(event, { value }) {
+        this.setState({
+            numberOfPassengers: value
+        })
+    }
+
+    setDepatureDate(date) {
+        this.setState({
+            depatureDate: date
+        })
+    }
+
+    setArrivalDate(date) {
+        this.setState({
+            arrivalDate: date
+        })
+    }
+
     showReturnDate() {
         const { isReturn } = this.props;
 
         if (isReturn === true) {
             return (
-                <div>
+                <div className="form-field">
+                    <div>Return Date</div>
                     <DatePicker 
-                        focus={this.state.focus}
-                        onFocusChange={this.onFocusChange}
-                        onDateChange={this.onDateChange}
+                        onDateChange={this.setArrivalDate}
                     />
                 </div>
             );
@@ -58,22 +76,16 @@ class SearchForm extends Component {
 
     filterFlights() {
         const { isReturn, updateSearchParams } = this.props;
-        const { from, to, numberOfPassengers} = this.state;
+        const { from, to, depatureDate, arrivalDate, numberOfPassengers} = this.state;
         updateSearchParams({
             from,
             to,
             numberOfPassengers,
+            depatureDate,
+            arrivalDate,
             isReturn,
         });
-    }
-
-    onDateChange(date) {
-        this.setState({ date });
-      }
-    
-    onFocusChange({ focused }) {
-        this.setState({ focused });
-    }
+    }    
 
     render() {
 
@@ -87,9 +99,15 @@ class SearchForm extends Component {
             { key: 'TWN', value: 'TWN', flag: 'tw', text: 'Taiwan' },
             { key: 'USA', value: 'USA', flag: 'us', text: 'United States' },
         ]
+
+        const passengerOptions = [1,2,3,4,5,6,7,8,9].map(num => ({
+            key: num, value: num, text: num
+        }));
+
         return (
             <div>
                 <Form style={{textAlign: 'left'}}>
+                    <div>From</div>
                     <Dropdown 
                         className="form-field"
                         placeholder='Select '
@@ -98,6 +116,7 @@ class SearchForm extends Component {
                         onChange={this.setFrom}
                     /> 
                     
+                    <div>Destination</div>
                     <Dropdown 
                         className="form-field"
                         placeholder='Destination ' 
@@ -107,22 +126,31 @@ class SearchForm extends Component {
                     /> 
 
                     <div className="form-field">
+                        <div>Depature Date</div>
                         <DatePicker 
-                            className="form-field"
-                            focus={this.state.focus}
-                            onFocusChange={this.onFocusChange}
-                            onDateChange={this.onDateChange}
+                            onDateChange={this.setDepatureDate}
                         />
                     </div>
                     
                     {this.showReturnDate()}
+
+                    <div>Passengers</div>
+                    <Dropdown 
+                        className="form-field"
+                        placeholder='Passengers'
+                        fluid search selection
+                        options={passengerOptions}
+                        onChange={this.setPassengers}
+                        defaultValue={1}
+                    /> 
 
                     <div style={{
                         width: '100%',
                         textAlign: 'center',
                         margin: '15px 0'
                     }}>
-                        <Button 
+                        <Button
+                            primary 
                             className="form-button"
                             onClick={this.filterFlights}
                             type='submit'>

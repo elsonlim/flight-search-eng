@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import FlightRow from '../FlightRow';
+import * as Actions from '../../actions';
+import './FlightList.css';
 
 class FlightList extends Component {
     
@@ -41,15 +43,26 @@ class FlightList extends Component {
     }
 
     _showOnewayFlights(flights) {
-        return flights.departing.map(flight => 
-            (
+        const flightRows = [];
+        
+        flights.departing.forEach(flight => {
+            let price = flight.price.amount;
+            
+            if(!this._checkRefineSearch(price)) {
+                return;
+            }
+
+            flightRows.push(
                 <FlightRow 
                     key={flight.id} 
                     logo={flight.IATA} 
                     departure={flight}
+                    price={flight.price.amount}
                 /> 
-            )
-        );
+            ) ;
+        });
+
+        return flightRows;
     }
 
     _showReturnFlights(flights) {
@@ -58,18 +71,35 @@ class FlightList extends Component {
         
         departing.forEach((flight) => {
             arriving.forEach((returnFlight) => {
+                const price = flight.price.amount + returnFlight.price.amount;
+                
+                if(!this._checkRefineSearch(price)) {
+                    return;
+                }
+
                 flightRows.push(
                     <FlightRow 
                         key={`${flight.id}-${returnFlight.id}`} 
                         logo={flight.IATA} 
                         departure={flight} 
-                        arrival={returnFlight} 
+                        arrival={returnFlight}
+                        price={price}
                     />
                 );
             });
         });
 
         return flightRows;
+    }
+
+    _checkRefineSearch(price) {
+        const priceSearch = this.props.priceRange.search;
+
+        if( price > priceSearch.max || price < priceSearch.min) {
+            return false;
+        }
+
+        return true;
     }
 
     getFlightRows(isReturn = true) {
@@ -85,10 +115,30 @@ class FlightList extends Component {
 
         return this._showReturnFlights(flights);
     }
+
+    getFlightDate() {
+        const { depatureDate, arrivalDate } = this.props.searchParams;
+        const dates = [];
+        if(depatureDate) {
+            dates.push(<div key={0}>Depart: {depatureDate}</div>);
+        }
+
+        if(arrivalDate) {
+            dates.push(<div key={1}>Return: {arrivalDate}</div>)
+        }
+
+        return dates;
+    }
     
     render() {
         return (
             <div>
+                <div className="results-header-container">
+                    <div className="results-title">Your Results</div>
+                    <div className="results-date">
+                        {this.getFlightDate()}
+                    </div>
+                </div>
                 {this.getFlightRows(this.props.searchParams.isReturn)}
             </div>
         );
@@ -98,9 +148,10 @@ class FlightList extends Component {
 const mapStateToProps = state => ({
     flights: state.flights,
     searchParams: state.searchParams,
+    priceRange: state.priceRange,
 });
 
-export default connect(mapStateToProps)(FlightList);
+export default connect(mapStateToProps, Actions)(FlightList);
 
 
 // {

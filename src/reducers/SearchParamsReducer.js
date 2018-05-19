@@ -3,8 +3,8 @@ const initState = {
     from: null,
     to: null,
     depatureDate: null,
-    returnDate: null,
-    numberOfPassengers: null
+    arrivalDate: null,
+    numberOfPassengers: 1
 };
 
 export default (state = initState, action) => {

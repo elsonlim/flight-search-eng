@@ -7,3 +7,13 @@ export const updateSearchParams = searchParams => ({
 	type: 'search-filter',
 	payload: searchParams
 });
+
+export const updatePriceRange = priceRange => ({
+	type: 'price_range',
+	payload: priceRange
+});
+
+export const updatePriceSearch = priceSearch => ({
+	type: 'price_search',
+	payload: priceSearch
+});

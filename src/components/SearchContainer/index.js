@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions'
 
 import SearchForm from '../SearchForm';
+import RefineFlightSearch from '../RefineFlightSearch';
 
 class SearchContainer extends Component {
 
@@ -33,6 +34,7 @@ class SearchContainer extends Component {
                     <Menu.Item name='Return' active={this.state.activeItem === 'Return'} onClick={this.handleItemClick} />
                 </Menu>
                 <SearchForm />
+                <RefineFlightSearch />
             </div>
         );
     }

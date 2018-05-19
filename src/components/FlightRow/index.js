@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Button } from 'semantic-ui-react'; 
+import { connect } from 'react-redux';
 
 import AirlineLogo from '../AirlineLogo';
 import FlightDetail from '../FlightDetail';
@@ -7,19 +8,6 @@ import FlightDetail from '../FlightDetail';
 import './FlightRow.css';
 
 class FlightRow extends Component {
-
-    getPrice() {
-        let { departure, arrival } = this.props;
-
-        let price = departure.price.amount;
-
-        if (arrival) {
-            price += arrival.price.amount;
-        }
-
-        return price;
-    }
-
     getFlightDetails() {
         const { departure, arrival } = this.props;
 
@@ -42,7 +30,7 @@ class FlightRow extends Component {
     }
     
     render() {
-        const { logo } = this.props;
+        const { logo, price } = this.props;
 
         return (
             <div className="flights">
@@ -55,7 +43,7 @@ class FlightRow extends Component {
                             {this.getFlightDetails()}
                         </Grid.Column>
                         <Grid.Column width={2}>
-                            ${this.getPrice()}
+                            {price}
                         </Grid.Column>
                         <Grid.Column width={5}>
                             <Button content='Select this flight' primary /> 
@@ -67,4 +55,8 @@ class FlightRow extends Component {
     }
 }
 
-export default FlightRow;
+const mapStateToProps = state => ({
+    numberOfPassengers: state.searchParams.numberOfPassengers
+});
+
+export default connect(mapStateToProps)(FlightRow);
