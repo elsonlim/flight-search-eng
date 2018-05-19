@@ -15,6 +15,8 @@ class DatePicker extends Component {
     
         this.onDateChange = this.onDateChange.bind(this);
         this.onFocusChange = this.onFocusChange.bind(this);
+
+        this.props.onDateChange(this.state.date.toDate().toLocaleDateString())
       }
     
       onDateChange(date) {
@@ -33,7 +35,7 @@ class DatePicker extends Component {
             <div className="no-border">
                 <SingleDatePicker
                     id="date_input"
-                    date={date}
+                    date={this.state.date}
                     focused={focused}
                     onDateChange={this.onDateChange}
                     onFocusChange={this.onFocusChange}

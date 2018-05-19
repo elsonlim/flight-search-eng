@@ -102,7 +102,7 @@ class FlightList extends Component {
         return true;
     }
 
-    getFlightRows(isReturn = true) {
+    getFlightRows(isReturn = false) {
         const flights = this._getFilteredFlights();
 
         if(flights.departing.length === 0 || (isReturn && flights.arriving.length === 0)) {
@@ -116,14 +116,14 @@ class FlightList extends Component {
         return this._showReturnFlights(flights);
     }
 
-    getFlightDate() {
+    getFlightDate(isReturn = false) {
         const { depatureDate, arrivalDate } = this.props.searchParams;
         const dates = [];
         if(depatureDate) {
             dates.push(<div key={0}>Depart: {depatureDate}</div>);
         }
 
-        if(arrivalDate) {
+        if(isReturn && arrivalDate) {
             dates.push(<div key={1}>Return: {arrivalDate}</div>)
         }
 
@@ -136,7 +136,7 @@ class FlightList extends Component {
                 <div className="results-header-container">
                     <div className="results-title">Your Results</div>
                     <div className="results-date">
-                        {this.getFlightDate()}
+                        {this.getFlightDate(this.props.searchParams.isReturn)}
                     </div>
                 </div>
                 {this.getFlightRows(this.props.searchParams.isReturn)}

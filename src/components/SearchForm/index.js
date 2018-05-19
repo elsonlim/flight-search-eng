@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Dropdown } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import moment from 'moment';
 
 import './SearchForm.css'
 
@@ -63,10 +64,14 @@ class SearchForm extends Component {
         const { isReturn } = this.props;
 
         if (isReturn === true) {
+            const date = new Date();
+            date.setDate(date.getDate() + 1);
+
             return (
                 <div className="form-field">
                     <div>Return Date</div>
-                    <DatePicker 
+                    <DatePicker
+                        initialDate={moment(date)}
                         onDateChange={this.setArrivalDate}
                     />
                 </div>
@@ -128,6 +133,7 @@ class SearchForm extends Component {
                     <div className="form-field">
                         <div>Depature Date</div>
                         <DatePicker 
+                            initialDate={moment(new Date())}
                             onDateChange={this.setDepatureDate}
                         />
                     </div>
