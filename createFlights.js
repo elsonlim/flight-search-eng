@@ -4,17 +4,16 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 };
 
-const location = ['USA', 'AUS', 'SGP', 'HKG', 'JPN', 'TWN', 'VNM'];
+const location = ['USA', 'AUS', 'SGP', 'HKG', 'JPN', 'TWN'];
 
 const airlinesInfo = [
-    { origin: 'USA', IATA: 'AAL' },
+    { origin: 'USA', IATA: 'DL' },
     { origin: 'AUS', IATA: 'QAN' },
     { origin: 'SGP', IATA: 'SQ' },
     { origin: 'HKG', IATA: 'CX' },
     { origin: 'JPN', IATA: 'JAL' },
     { origin: 'JPN', IATA: 'ANA' },
-    { origin: 'TWN', IATA: 'BR' },
-    { origin: 'VNM', IATA: 'EVA' },
+    { origin: 'TWN', IATA: 'EVA' },
 ];
 
 function getRandomFromArray(arr) {

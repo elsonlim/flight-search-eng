@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Grid } from 'semantic-ui-react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
+
+import FlightSearchEngine from './components/FlightSearchEngine';
+import reducers from './reducers';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Provider store={createStore(reducers)}>
+        <div className="App" >
+          <Grid>
+            <Grid.Column width={1} />
+            <Grid.Column width={14} >
+              <FlightSearchEngine />
+            </Grid.Column>
+            <Grid.Column width={1} />
+          </Grid>
+        </div>
+      </Provider>
     );
   }
 }
