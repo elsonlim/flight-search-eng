@@ -1,0 +1,15 @@
+.no-border .SingleDatePickerInput {
+    border: none;
+}
+
+.no-border svg[role="presentation"] {
+    display: none;
+}
+
+.CalendarMonth_table {
+    margin-top: 10px;
+}
+
+.SingleDatePicker_picker {
+    top: 45px !important;
+}

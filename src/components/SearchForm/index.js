@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { Form, Button, Dropdown } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions'
 
 import './SearchForm.css'
+
+import DatePicker from '../DatePicker';
+import * as actions from '../../actions';
+
+
 
 class SearchForm extends Component {
     constructor() {
@@ -20,6 +24,8 @@ class SearchForm extends Component {
         this.setFrom = this.setFrom.bind(this);
         this.setTo = this.setTo.bind(this);
         this.filterFlights = this.filterFlights.bind(this);
+        this.onDateChange = this.onDateChange.bind(this);
+        this.onFocusChange = this.onFocusChange.bind(this);
     }
 
     setFrom(event, { value }) {
@@ -39,7 +45,13 @@ class SearchForm extends Component {
 
         if (isReturn === true) {
             return (
-                <div>return date here</div>
+                <div>
+                    <DatePicker 
+                        focus={this.state.focus}
+                        onFocusChange={this.onFocusChange}
+                        onDateChange={this.onDateChange}
+                    />
+                </div>
             );
         }
     }
@@ -55,7 +67,13 @@ class SearchForm extends Component {
         });
     }
 
-
+    onDateChange(date) {
+        this.setState({ date });
+      }
+    
+    onFocusChange({ focused }) {
+        this.setState({ focused });
+    }
 
     render() {
 
@@ -88,6 +106,15 @@ class SearchForm extends Component {
                         onChange={this.setTo}
                     /> 
 
+                    <div className="form-field">
+                        <DatePicker 
+                            className="form-field"
+                            focus={this.state.focus}
+                            onFocusChange={this.onFocusChange}
+                            onDateChange={this.onDateChange}
+                        />
+                    </div>
+                    
                     {this.showReturnDate()}
 
                     <div style={{
