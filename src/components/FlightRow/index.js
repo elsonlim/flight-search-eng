@@ -21,7 +21,7 @@ class FlightRow extends Component {
     }
 
     getFlightDetails() {
-        let { departure, arrival } = this.props;
+        const { departure, arrival } = this.props;
 
         if (arrival) {
             return (
@@ -42,7 +42,7 @@ class FlightRow extends Component {
     }
     
     render() {
-        const { logo, departure, arrival } = this.props;
+        const { logo } = this.props;
 
         return (
             <div className="flights">

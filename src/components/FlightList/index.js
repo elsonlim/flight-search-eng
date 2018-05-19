@@ -4,31 +4,60 @@ import FlightRow from '../FlightRow';
 
 class FlightList extends Component {
     
-    getFlightRows(isOneWay) {
-        const { flights } = this.props;
+    _getFilteredFlights() {
+        const { flights, searchParams } = this.props;
+        const { from, to } = searchParams;
 
-        if (isOneWay) {
-            return flights.map(flight => 
-                (
-                    <FlightRow 
-                        key={flight.id} 
-                        logo={flight.IATA} 
-                        departure={flight} 
-                        arrival={flight} 
-                    /> 
-                )
-            );
+        const filteredFlights = {
+            departing: [],
+            arriving: []
         }
 
-        const flightRows = [];
-        flights.forEach((flight) => {
-            const returnFlights = flights.filter(
-                returnFlight => 
-                    returnFlight.to === flight.from
-                    && returnFlight.from === flight.to
-            );
+        if(!from || !to) {
+            return filteredFlights;
+        }
 
-            returnFlights.forEach((returnFlight) => {
+        flights.forEach((flight) => {
+            if(flight.from === from && flight.to === to) {
+                filteredFlights.departing.push(flight);
+            } else if(flight.to === from && flight.from === to ) {
+                filteredFlights.arriving.push(flight);
+            }
+        });
+        return filteredFlights;
+    }
+
+    _showError() {
+        const { from, to } = this.props.searchParams;
+            
+        const errors = [];
+        !from && errors.push(<div key={0} >Please select country to depart from</div>);
+        !to && errors.push(<div key={1} >Please select country of arrival</div>);
+
+        if(errors.length) {
+            return errors;
+        }
+        return (<div>No results found</div>);
+    }
+
+    _showOnewayFlights(flights) {
+        return flights.departing.map(flight => 
+            (
+                <FlightRow 
+                    key={flight.id} 
+                    logo={flight.IATA} 
+                    departure={flight}
+                /> 
+            )
+        );
+    }
+
+    _showReturnFlights(flights) {
+        const {departing, arriving} = flights;
+        const flightRows = [];
+        
+        departing.forEach((flight) => {
+            arriving.forEach((returnFlight) => {
                 flightRows.push(
                     <FlightRow 
                         key={`${flight.id}-${returnFlight.id}`} 
@@ -39,21 +68,36 @@ class FlightList extends Component {
                 );
             });
         });
-        
+
         return flightRows;
+    }
+
+    getFlightRows(isReturn = true) {
+        const flights = this._getFilteredFlights();
+
+        if(flights.departing.length === 0 || (isReturn && flights.arriving.length === 0)) {
+            return this._showError();
+        }
+
+        if (!isReturn) {
+            return this._showOnewayFlights(flights);
+        }
+
+        return this._showReturnFlights(flights);
     }
     
     render() {
         return (
             <div>
-                {this.getFlightRows()}
+                {this.getFlightRows(this.props.searchParams.isReturn)}
             </div>
         );
     };
 }
 
 const mapStateToProps = state => ({
-    flights: state.flights
+    flights: state.flights,
+    searchParams: state.searchParams,
 });
 
 export default connect(mapStateToProps)(FlightList);

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions'
 
 import SearchForm from '../SearchForm';
 
@@ -19,6 +21,8 @@ class SearchContainer extends Component {
         this.setState({
             activeItem: name
         });
+
+        this.props.updateFlightType(name === 'Return');
     };
 
     render () {
@@ -34,4 +38,4 @@ class SearchContainer extends Component {
     }
 }
 
-export default SearchContainer;
+export default connect(null, actions)(SearchContainer);

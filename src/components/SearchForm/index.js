@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Button, Dropdown } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions'
 
 import './SearchForm.css'
 
@@ -12,11 +14,12 @@ class SearchForm extends Component {
             to: null,
             depatureDate: null,
             returnDate: null,
-            numberOfPassengers: null
+            numberOfPassengers: 1
         };
 
         this.setFrom = this.setFrom.bind(this);
         this.setTo = this.setTo.bind(this);
+        this.filterFlights = this.filterFlights.bind(this);
     }
 
     setFrom(event, { value }) {
@@ -31,14 +34,40 @@ class SearchForm extends Component {
         })
     }
 
+    showReturnDate() {
+        const { isReturn } = this.props;
+
+        if (isReturn === true) {
+            return (
+                <div>return date here</div>
+            );
+        }
+    }
+
+    filterFlights() {
+        const { isReturn, updateSearchParams } = this.props;
+        const { from, to, numberOfPassengers} = this.state;
+        updateSearchParams({
+            from,
+            to,
+            numberOfPassengers,
+            isReturn,
+        });
+    }
+
+
+
     render() {
+
+        //const location = ['USA', 'AUS', 'SGP', 'HKG', 'JPN', 'TWN'];
+
         const countryOptions = [
-            { key: 'au', value: 'au', flag: 'au', text: 'Australia' },
-            { key: 'jp', value: 'jp', flag: 'jp', text: 'Japan' },
-            { key: 'hk', value: 'hk', flag: 'hk', text: 'Hong Kong' },
-            { key: 'sg', value: 'sg', flag: 'sg', text: 'Singapore' },
-            { key: 'tw', value: 'tw', flag: 'tw', text: 'Taiwan' },
-            { key: 'us', value: 'us', flag: 'us', text: 'United States' },
+            { key: 'AUS', value: 'AUS', flag: 'au', text: 'Australia' },
+            { key: 'JPN', value: 'JPN', flag: 'jp', text: 'Japan' },
+            { key: 'HKG', value: 'HKG', flag: 'hk', text: 'Hong Kong' },
+            { key: 'SGP', value: 'SGP', flag: 'sg', text: 'Singapore' },
+            { key: 'TWN', value: 'TWN', flag: 'tw', text: 'Taiwan' },
+            { key: 'USA', value: 'USA', flag: 'us', text: 'United States' },
         ]
         return (
             <div>
@@ -59,12 +88,19 @@ class SearchForm extends Component {
                         onChange={this.setTo}
                     /> 
 
+                    {this.showReturnDate()}
+
                     <div style={{
                         width: '100%',
                         textAlign: 'center',
                         margin: '15px 0'
                     }}>
-                        <Button className="form-button" type='submit'>Search</Button>
+                        <Button 
+                            className="form-button"
+                            onClick={this.filterFlights}
+                            type='submit'>
+                                Search
+                        </Button>
                     </div>
                     
                 </Form>
@@ -73,4 +109,8 @@ class SearchForm extends Component {
     }
 }
 
-export default SearchForm;
+const mapStateToProps = state => ({
+    isReturn: state.searchType
+});
+
+export default connect(mapStateToProps, actions)(SearchForm);
