@@ -36,17 +36,14 @@ class FlightRow extends Component {
             <div className="flights">
                 <Grid>
                     <Grid.Row verticalAlign={'middle'}>
-                        <Grid.Column width={3}>
-                            <AirlineLogo airlineLogo={logo} />
-                        </Grid.Column>
-                        <Grid.Column width={6}>
+                        <Grid.Column width={10}>
                             {this.getFlightDetails()}
                         </Grid.Column>
                         <Grid.Column width={2}>
-                            {price}
+                            ${price}
                         </Grid.Column>
-                        <Grid.Column width={5}>
-                            <Button content='Select this flight' primary /> 
+                        <Grid.Column width={4}>
+                            <Button content='Select flight' primary /> 
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>

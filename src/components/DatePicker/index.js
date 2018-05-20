@@ -16,12 +16,12 @@ class DatePicker extends Component {
         this.onDateChange = this.onDateChange.bind(this);
         this.onFocusChange = this.onFocusChange.bind(this);
 
-        this.props.onDateChange(this.state.date.toDate().toLocaleDateString())
+        this.props.onDateChange(this.state.date)
       }
     
       onDateChange(date) {
         this.setState({ date });
-        this.props.onDateChange(date.toDate().toLocaleDateString())
+        this.props.onDateChange(date)
       }
     
       onFocusChange({ focused }) {

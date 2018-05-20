@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import FlightRow from '../FlightRow';
 import * as Actions from '../../actions';
+import moment from 'moment';
 import './FlightList.css';
 
 class FlightList extends Component {
@@ -29,20 +30,8 @@ class FlightList extends Component {
         return filteredFlights;
     }
 
-    _showError() {
-        const { from, to } = this.props.searchParams;
-            
-        const errors = [];
-        !from && errors.push(<div key={0} >Please select country to depart from</div>);
-        !to && errors.push(<div key={1} >Please select country of arrival</div>);
-
-        if(errors.length) {
-            return errors;
-        }
-        return (<div>No results found</div>);
-    }
-
     _showOnewayFlights(flights) {
+        const {numberOfPassengers} = this.props.searchParams;
         const flightRows = [];
         
         flights.departing.forEach(flight => {
@@ -57,7 +46,7 @@ class FlightList extends Component {
                     key={flight.id} 
                     logo={flight.IATA} 
                     departure={flight}
-                    price={flight.price.amount}
+                    price={numberOfPassengers * price}
                 /> 
             ) ;
         });
@@ -67,11 +56,13 @@ class FlightList extends Component {
 
     _showReturnFlights(flights) {
         const {departing, arriving} = flights;
+        const {numberOfPassengers} = this.props.searchParams;
+
         const flightRows = [];
         
         departing.forEach((flight) => {
             arriving.forEach((returnFlight) => {
-                const price = flight.price.amount + returnFlight.price.amount;
+                const price = (flight.price.amount + returnFlight.price.amount);
                 
                 if(!this._checkRefineSearch(price)) {
                     return;
@@ -83,7 +74,7 @@ class FlightList extends Component {
                         logo={flight.IATA} 
                         departure={flight} 
                         arrival={returnFlight}
-                        price={price}
+                        price={numberOfPassengers * price}
                     />
                 );
             });
@@ -102,11 +93,31 @@ class FlightList extends Component {
         return true;
     }
 
+    _getErrors() {
+        const { from, to, depatureDate, arrivalDate, isReturn } = this.props.searchParams;
+            
+        const errors = [];
+        !from && errors.push(<div key={0} >Please select country to depart from</div>);
+        !to && errors.push(<div key={1} >Please select country of arrival</div>);
+
+        if(isReturn && arrivalDate && arrivalDate.diff(depatureDate, 'days') < 0) {
+            errors.push(<div key={2} >Arrival date cannot be before depature Date</div>);
+        }
+
+        return errors;
+    }
+
     getFlightRows(isReturn = false) {
+        
+        const errors = this._getErrors();
+        if(errors && errors.length) {
+        return (<div className="result-error">{errors}</div>);
+        }
+
         const flights = this._getFilteredFlights();
 
         if(flights.departing.length === 0 || (isReturn && flights.arriving.length === 0)) {
-            return this._showError();
+            return (<div>No results found</div>);
         }
 
         if (!isReturn) {
@@ -120,11 +131,11 @@ class FlightList extends Component {
         const { depatureDate, arrivalDate } = this.props.searchParams;
         const dates = [];
         if(depatureDate) {
-            dates.push(<div key={0}>Depart: {depatureDate}</div>);
+            dates.push(<div key={0}>Depart: {depatureDate.toDate().toLocaleDateString()}</div>);
         }
 
         if(isReturn && arrivalDate) {
-            dates.push(<div key={1}>Return: {arrivalDate}</div>)
+            dates.push(<div key={1}>Return: {arrivalDate.toDate().toLocaleDateString()}</div>)
         }
 
         return dates;

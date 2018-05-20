@@ -15,11 +15,21 @@ class App extends Component {
       <Provider store={createStore(reducers)}>
         <div className="App" >
           <Grid>
-            <Grid.Column width={1} />
-            <Grid.Column width={14} >
-              <FlightSearchEngine />
-            </Grid.Column>
-            <Grid.Column width={1} />
+          <Grid.Row className="App-title-container">
+              <Grid.Column width={1} />
+              <Grid.Column width={14} >
+                <div className="App-title">
+                  Flight Search Engine
+                </div>
+              </Grid.Column>
+          </Grid.Row>
+            
+            <Grid.Row>
+              <Grid.Column width={1} />
+              <Grid.Column width={14} >
+                <FlightSearchEngine />
+              </Grid.Column>
+            </Grid.Row>
           </Grid>
         </div>
       </Provider>

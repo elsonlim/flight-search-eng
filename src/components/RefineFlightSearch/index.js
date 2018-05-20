@@ -30,7 +30,7 @@ class RefineFlightSearch extends Component {
 					</Card.Header>
 					<div className="refine-search-slider">
 						<RangeSlider
-							name="Price" 
+							name="Price/Pax" 
 							range={priceFilter}
 							value={priceSearch} updateValue={this.updatePriceRange} />
 					</div>
