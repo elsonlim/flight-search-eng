@@ -156,7 +156,7 @@ export class SearchForm extends Component {
                     /> 
 
                     <div className="form-field">
-                        <div>Depature Date</div>
+                        <div>Departure Date</div>
                         <DatePicker 
                             initialDate={moment(new Date())}
                             onDateChange={this.setDepatureDate}
