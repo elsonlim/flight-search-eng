@@ -24,7 +24,8 @@
     "eject": "react-scripts eject",
     "gendocs": "node_modules/documentation/bin/documentation.js build src/** -f html -o docs",
     "opendocs": "open docs/index.html",
-    "docs": "npm run gendocs && npm run opendocs"
+    "docs": "npm run gendocs && npm run opendocs",
+    "create-flights": "node createFlights.js"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
