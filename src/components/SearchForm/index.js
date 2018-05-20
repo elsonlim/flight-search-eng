@@ -9,6 +9,9 @@ import './SearchForm.css'
 import DatePicker from '../DatePicker';
 import * as actions from '../../actions';
 
+/**
+ * A SearchForm object
+ */
 export class SearchForm extends Component {
     constructor() {
         super();
@@ -29,36 +32,55 @@ export class SearchForm extends Component {
         this.setArrivalDate = this.setArrivalDate.bind(this);
     }
 
+     /**
+	 * This method update the departing location
+	 */
     setFrom(event, { value }) {
         this.setState({
             from: value
         })
     }
 
+     /**
+	 * This method update the arrival location
+	 */
     setTo(event, { value }) {
         this.setState({
             to: value
         })
     }
 
+     /**
+	 * This method update the number of passengers traveling
+	 */
     setPassengers(event, { value }) {
         this.setState({
             numberOfPassengers: value
         })
     }
 
+     /**
+	 * This method update the depature date
+	 */
     setDepatureDate(date) {
         this.setState({
             depatureDate: date
         })
     }
 
+     /**
+	 * This method update the arrival date
+	 */
     setArrivalDate(date) {
         this.setState({
             arrivalDate: date
         })
     }
 
+     /**
+	 * This method returns an element that allow user to select return date
+	 * @returns {ReactElement} show a date field that can select an return date
+	 */
     showReturnDate() {
         const { isReturn } = this.props;
 
@@ -78,6 +100,9 @@ export class SearchForm extends Component {
         }
     }
 
+    /**
+	 * This method update the search conditions
+	 */
     filterFlights() {
         const { isReturn, updateSearchParams } = this.props;
         const { from, to, depatureDate, arrivalDate, numberOfPassengers} = this.state;
@@ -91,10 +116,11 @@ export class SearchForm extends Component {
         });
     }    
 
+    /**
+	 * This method generates a form to search for results
+	 * @returns {ReactElement} a search form
+	 */
     render() {
-
-        //const location = ['USA', 'AUS', 'SGP', 'HKG', 'JPN', 'TWN'];
-
         const countryOptions = [
             { key: 'AUS', value: 'AUS', flag: 'au', text: 'Australia' },
             { key: 'JPN', value: 'JPN', flag: 'jp', text: 'Japan' },

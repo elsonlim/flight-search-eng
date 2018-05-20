@@ -5,8 +5,14 @@ import FlightRow from '../FlightRow';
 import * as Actions from '../../actions';
 import './FlightList.css';
 
+/**
+ * A FlightList object
+ */
 export class FlightList extends Component {
-    
+    /**
+	 * This method returns a object that contains departing and arriving flights
+	 * @returns {Object} that contain departing and arriving flight to destination.
+	 */
     _getFilteredFlights() {
         const { flights, searchParams } = this.props;
         const { from, to } = searchParams;
@@ -30,6 +36,10 @@ export class FlightList extends Component {
         return filteredFlights;
     }
 
+    /**
+	 * This method returns a list of flights that contains one way flight details
+	 * @returns {Array} that contain a list of one way flights
+	 */
     _showOnewayFlights(flights) {
         const {numberOfPassengers} = this.props.searchParams;
         const flightRows = [];
@@ -54,6 +64,10 @@ export class FlightList extends Component {
         return flightRows;
     }
 
+    /**
+	 * This method returns a list of flights that contains return flight details
+	 * @returns {Array} that contain a list of return flights
+	 */
     _showReturnFlights(flights) {
         const {departing, arriving} = flights;
         const {numberOfPassengers} = this.props.searchParams;
@@ -83,6 +97,10 @@ export class FlightList extends Component {
         return flightRows;
     }
 
+    /**
+	 * This method shows if price is within the refine search filters
+	 * @returns {Boolean} true if flight is within refine search filter
+	 */
     _checkRefineSearch(price) {
         const priceSearch = this.props.priceRange.search;
 
@@ -93,6 +111,10 @@ export class FlightList extends Component {
         return true;
     }
 
+    /**
+	 * This method returns errors that cause search results not to return
+	 * @returns {Array} errors that cause search results not to return
+	 */
     _getErrors() {
         const { from, to, depatureDate, arrivalDate, isReturn } = this.props.searchParams;
             
@@ -107,8 +129,11 @@ export class FlightList extends Component {
         return errors;
     }
 
+    /**
+	 * This method returns error or one way or return flights
+	 * @returns {Array} displays the right type of flights
+	 */
     getFlightRows(isReturn = false) {
-        
         const errors = this._getErrors();
         if(errors && errors.length) {
         return (<div className="result-error">{errors}</div>);
@@ -127,6 +152,10 @@ export class FlightList extends Component {
         return this._showReturnFlights(flights);
     }
 
+    /**
+	 * This method returns the depature and arrival dates(if available)
+	 * @returns {Array} containing depature and arrival dates
+	 */
     getFlightDate(isReturn = false) {
         const { depatureDate, arrivalDate } = this.props.searchParams;
         const dates = [];
@@ -141,6 +170,10 @@ export class FlightList extends Component {
         return dates;
     }
     
+    /**
+	 * This method generates a list of flight row details.
+	 * @returns {ReactElement} return a list of FlightRows
+	 */
     render() {
         return (
             <div>

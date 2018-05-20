@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Image } from 'semantic-ui-react'; 
 
+/**
+ * A AirlineLogo object
+ */
 class AirlineLogo extends Component {
 
     getImage(code) {
@@ -18,6 +21,10 @@ class AirlineLogo extends Component {
         return `/airlineLogo/${airlineLogo[code]}`;
     }
 
+    /**
+     * This method generates a a airline logo
+     * @returns {ReactElement} a image of an airline logo.
+     */
     render() {
         return (
             <div>

@@ -8,6 +8,9 @@ import * as Actions from '../../actions';
 
 import './RefineFlightSearch.css'
 
+/**
+ * A RefineFlightSearch object
+ */
 export class RefineFlightSearch extends Component {
 	constructor() {
 		super();
@@ -19,6 +22,10 @@ export class RefineFlightSearch extends Component {
 		this.props.updatePriceSearch(value);
 	}
 
+	/**
+	 * This method generates sliders for refine searching. 
+	 * @returns {ReactElement} the refine search section.
+	 */
 	render() {
 		const priceFilter = this.props.priceRange.filter; 
 		const priceSearch = this.props.priceRange.search; 
@@ -35,7 +42,6 @@ export class RefineFlightSearch extends Component {
 							range={priceFilter}
 							value={priceSearch} updateValue={this.updatePriceFilter} />
 					</div>
-					
 				</Card.Content>
 			</Card>
 		);

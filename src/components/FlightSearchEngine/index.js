@@ -5,7 +5,14 @@ import FlightList from '../FlightList';
 import SearchContainer from '../SearchContainer';
 import './FlightSearchEngine.css';
 
+/**
+ * A FlightSearchEngine object
+ */
 class FlightSearchEngine extends Component {
+    /**
+	 * This method generates a full search engine with filters and resutls
+	 * @returns {ReactElement} a search engine element.
+	 */
     render () {
         return (
             <Grid stackable>

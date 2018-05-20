@@ -6,8 +6,10 @@ import * as actions from '../../actions'
 import SearchForm from '../SearchForm';
 import RefineFlightSearch from '../RefineFlightSearch';
 
+/**
+ * A SearchContainer object
+ */
 export class SearchContainer extends Component {
-
     constructor() {
         super();
 
@@ -18,6 +20,9 @@ export class SearchContainer extends Component {
         this.handleItemClick = this.handleItemClick.bind(this);
     };
 
+     /**
+	 * This method update the search type
+	 */
     handleItemClick (e, { name }) {
         this.setState({
             activeItem: name
@@ -26,6 +31,10 @@ export class SearchContainer extends Component {
         this.props.updateFlightType(name === 'Return');
     };
 
+    /**
+	 * This method generates a menu for search and fitlers
+	 * @returns {ReactElement} search options and filters
+	 */
     render () {
         return (
             <div>

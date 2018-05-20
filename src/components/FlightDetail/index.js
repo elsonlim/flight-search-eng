@@ -3,8 +3,14 @@ import PropTypes from 'prop-types';
 import AirlineLogo from '../AirlineLogo';
 import './FlightDetail.css';
 
+/**
+ * A FlightDetail object
+ */
 class FlightDetail extends Component {
-
+    /**
+	 * This method change a number to time(i.e. 2359 to 11:59pm)
+	 * @returns {String} that displays time.
+	 */
     _numToTime(number) {
         let dayFormat = 'am';
         const mins = ("0" + (number % 100)).slice(-2);
@@ -23,6 +29,10 @@ class FlightDetail extends Component {
         return `${hours}:${mins}${dayFormat}`;
     }
 
+    /**
+	 * This method adds a indicator is the flight arrives 
+	 * @returns {String} a string indicator of day increment.
+	 */
     _getDayIncrement(departure, arrival) {
         if(arrival < departure) {
             return "(+1)"
@@ -30,6 +40,10 @@ class FlightDetail extends Component {
         return "";
     }
 
+    /**
+	 * This method generates a fight detail object
+	 * @returns {ReactElement} that show flight details.
+	 */
     render () {
         const { flightInfo } = this.props;
         const {arrival, departure} = flightInfo.time;

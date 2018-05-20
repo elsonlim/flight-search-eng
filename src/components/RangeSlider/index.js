@@ -39,15 +39,15 @@ const style = {
  * A RangeSlider object
  */
 class RangeSlider extends Component {
+	/**
+	 * This method generates a slider with infomations.
+	 * @returns {ReactElement} a single slider.
+	 */
 	render() {
 		const {
 			minMax, filterName, rangeInfo, rangeContainer, rangeSlider
 		} = style;
 
-		/**
-		 * This method generates a slider with infomations.
-		 * @returns {ReactElement} a single slider.
-		 */
 		return (
 			<div style={rangeContainer} >
 				<div style={rangeInfo}>

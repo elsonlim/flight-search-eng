@@ -6,6 +6,9 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import './DatePicker.css';
 
+/**
+ * A DatePicker object
+ */
 class DatePicker extends Component {
     constructor(props) {
         super(props);
@@ -19,15 +22,25 @@ class DatePicker extends Component {
         this.props.onDateChange(this.state.date)
       }
     
+      /**
+       * This method updates the date of a SingleDatePicker
+       */
       onDateChange(date) {
         this.setState({ date });
         this.props.onDateChange(date)
       }
     
+      /**
+       * This method updates the focus of a SingleDatePicker
+       */
       onFocusChange({ focused }) {
         this.setState({ focused });
       }
-    
+      
+      /**
+       * This method generates a date picker element
+       * @returns {ReactElement} a customise date picker
+       */
       render() {
         const { focused, date } = this.state;
     

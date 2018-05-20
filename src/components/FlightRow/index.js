@@ -6,7 +6,14 @@ import FlightDetail from '../FlightDetail';
 
 import './FlightRow.css';
 
+/**
+ * A FlightRow object
+ */
 class FlightRow extends Component {
+    /**
+	 * This method returns depature details and arrival details if available
+	 * @returns {ReactElement} flight details
+	 */
     getFlightDetails() {
         const { departure, arrival } = this.props;
 
@@ -28,6 +35,10 @@ class FlightRow extends Component {
         return (<FlightDetail flightInfo={departure} />);
     }
     
+    /**
+	 * This method returns full details of a flight include price and select button
+	 * @returns {ReactElement} full flight details 
+	 */
     render() {
         const { price } = this.props;
 
