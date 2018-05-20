@@ -5,7 +5,7 @@ Search criterial include, departing location, destination, date, number of passe
 # Web Application
 This application is hosted and can be easily accessed via the link below, bypassing the installation process.
 
-// some hosted link
+https://flight-search-eng.herokuapp.com/
 
 As the application is hosted on heroku's free tier, the first load will take longer as the instance needs to be spun up. It will be available until the end of May.
 
