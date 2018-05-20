@@ -76,7 +76,7 @@ class RangeSlider extends Component {
 RangeSlider.propTypes = {
 	name: PropTypes.string.isRequired,
 	value: PropTypes.object.isRequired,
-	updateValue: PropTypes.func.isRequired
+	updateValue: PropTypes.func.isRequired,
 };
 
 export default RangeSlider;

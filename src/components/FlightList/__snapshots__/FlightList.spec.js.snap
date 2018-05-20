@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlightList snapshot test show flightlist 1`] = `
+<div>
+  <div
+    className="results-header-container"
+  >
+    <div
+      className="results-title"
+    >
+      Your Results
+    </div>
+    <div
+      className="results-date"
+    >
+      <div>
+        Depart: 
+        2018-5-20
+      </div>
+      <div>
+        Return: 
+        2018-5-20
+      </div>
+    </div>
+  </div>
+  <div
+    className="flights"
+  >
+    <div
+      className="ui grid"
+    >
+      <div
+        className="middle aligned row"
+      >
+        <div
+          className="ten wide column"
+        >
+          <div>
+            <div
+              className="ui equal width grid"
+            >
+              <div
+                className="column"
+              >
+                <div
+                  className="flight-details"
+                >
+                  <div
+                    className="logo"
+                  >
+                    <div>
+                      <img
+                        className="ui tiny rounded image"
+                        src="/airlineLogo/dl.svg"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="details"
+                  >
+                    <div>
+                      DL
+                      -
+                      90
+                    </div>
+                    <div>
+                      USA
+                       &gt; 
+                      HKG
+                    </div>
+                    <div>
+                      Depart: 
+                      04:25am
+                    </div>
+                    <div>
+                      Arrival: 
+                      06:09am
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="column"
+              >
+                <div
+                  className="flight-details"
+                >
+                  <div
+                    className="logo"
+                  >
+                    <div>
+                      <img
+                        className="ui tiny rounded image"
+                        src="/airlineLogo/dl.svg"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="details"
+                  >
+                    <div>
+                      DL
+                      -
+                      91
+                    </div>
+                    <div>
+                      HKG
+                       &gt; 
+                      USA
+                    </div>
+                    <div>
+                      Depart: 
+                      05:30pm
+                    </div>
+                    <div>
+                      Arrival: 
+                      07:56pm
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="two wide column"
+        >
+          $
+          493
+        </div>
+        <div
+          className="four wide column"
+        >
+          <button
+            className="ui primary button"
+            disabled={undefined}
+            onClick={[Function]}
+            role="button"
+            tabIndex={undefined}
+          >
+            Select flight
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

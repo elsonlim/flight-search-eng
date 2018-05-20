@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker snapshot test show airline logo 1`] = `
+<div
+  className="no-border"
+>
+  <div
+    className="SingleDatePicker SingleDatePicker_1 SingleDatePicker__block SingleDatePicker__block_2"
+  >
+    <div>
+      <div
+        className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2 SingleDatePickerInput__block SingleDatePickerInput__block_3"
+      >
+        <div
+          className="DateInput DateInput_1 DateInput__block DateInput__block_2"
+        >
+          <input
+            aria-describedby="DateInput__screen-reader-message-date_input"
+            aria-label="Date"
+            autoComplete="off"
+            className="DateInput_input DateInput_input_1"
+            disabled={false}
+            id="date_input"
+            name="date_input"
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Date"
+            readOnly={false}
+            required={false}
+            type="text"
+            value="May 20, 2018"
+          />
+          <p
+            className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+            id="DateInput__screen-reader-message-date_input"
+          >
+            Press the down arrow key to interact with the calendar and
+              select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirlineLogo snapshot test show airline logo 1`] = `
+<div>
+  <img
+    className="ui tiny rounded image"
+    src="/airlineLogo/dl.svg"
+  />
+</div>
+`;

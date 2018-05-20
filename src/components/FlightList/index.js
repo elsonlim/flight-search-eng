@@ -5,7 +5,7 @@ import FlightRow from '../FlightRow';
 import * as Actions from '../../actions';
 import './FlightList.css';
 
-class FlightList extends Component {
+export class FlightList extends Component {
     
     _getFilteredFlights() {
         const { flights, searchParams } = this.props;

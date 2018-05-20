@@ -8,14 +8,14 @@ import * as Actions from '../../actions';
 
 import './RefineFlightSearch.css'
 
-class RefineFlightSearch extends Component {
+export class RefineFlightSearch extends Component {
 	constructor() {
 		super();
 
-		this.updatePriceRange = this.updatePriceRange.bind(this);
+		this.updatePriceFilter = this.updatePriceFilter.bind(this);
 	}
 
-	updatePriceRange(name, value) {
+	updatePriceFilter(name, value) {
 		this.props.updatePriceSearch(value);
 	}
 
@@ -33,7 +33,7 @@ class RefineFlightSearch extends Component {
 						<RangeSlider
 							name="Price/Pax" 
 							range={priceFilter}
-							value={priceSearch} updateValue={this.updatePriceRange} />
+							value={priceSearch} updateValue={this.updatePriceFilter} />
 					</div>
 					
 				</Card.Content>

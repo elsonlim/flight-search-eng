@@ -9,9 +9,7 @@ import './SearchForm.css'
 import DatePicker from '../DatePicker';
 import * as actions from '../../actions';
 
-
-
-class SearchForm extends Component {
+export class SearchForm extends Component {
     constructor() {
         super();
 

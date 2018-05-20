@@ -55,10 +55,10 @@ const mapStateToProps = state => ({
     numberOfPassengers: state.searchParams.numberOfPassengers
 });
 
-FlightRow.PropTypes = {
+FlightRow.propTypes = {
     numberOfPassengers: PropTypes.number.isRequired,
     departure: PropTypes.object.isRequired,
-    arrival: PropTypes.object.isRequired,
+    arrival: PropTypes.object,
 };
 
 export default connect(mapStateToProps)(FlightRow);

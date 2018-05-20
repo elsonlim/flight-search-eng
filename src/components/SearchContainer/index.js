@@ -6,7 +6,7 @@ import * as actions from '../../actions'
 import SearchForm from '../SearchForm';
 import RefineFlightSearch from '../RefineFlightSearch';
 
-class SearchContainer extends Component {
+export class SearchContainer extends Component {
 
     constructor() {
         super();

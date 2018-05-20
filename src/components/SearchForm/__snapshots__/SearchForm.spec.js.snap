@@ -1,0 +1,1384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm snapshot test show search form 1`] = `
+<div>
+  <form
+    action={undefined}
+    className="ui form"
+    onSubmit={[Function]}
+    style={
+      Object {
+        "textAlign": "left",
+      }
+    }
+  >
+    <div>
+      From
+    </div>
+    <div
+      aria-busy={undefined}
+      aria-disabled={undefined}
+      aria-expanded={false}
+      className="ui fluid search selection dropdown form-field"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+      tabIndex={undefined}
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-live="polite"
+        className="default text"
+        role="alert"
+      >
+        Select 
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        aria-multiselectable={undefined}
+        className="menu transition"
+        role="listbox"
+      >
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={true}
+          className="selected item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="au flag"
+          />
+          <span
+            className="text"
+          >
+            Australia
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="jp flag"
+          />
+          <span
+            className="text"
+          >
+            Japan
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="hk flag"
+          />
+          <span
+            className="text"
+          >
+            Hong Kong
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="sg flag"
+          />
+          <span
+            className="text"
+          >
+            Singapore
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="tw flag"
+          />
+          <span
+            className="text"
+          >
+            Taiwan
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="us flag"
+          />
+          <span
+            className="text"
+          >
+            United States
+          </span>
+        </div>
+      </div>
+    </div>
+    <div>
+      Destination
+    </div>
+    <div
+      aria-busy={undefined}
+      aria-disabled={undefined}
+      aria-expanded={false}
+      className="ui fluid search selection dropdown form-field"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+      tabIndex={undefined}
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-live="polite"
+        className="default text"
+        role="alert"
+      >
+        Destination 
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        aria-multiselectable={undefined}
+        className="menu transition"
+        role="listbox"
+      >
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={true}
+          className="selected item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="au flag"
+          />
+          <span
+            className="text"
+          >
+            Australia
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="jp flag"
+          />
+          <span
+            className="text"
+          >
+            Japan
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="hk flag"
+          />
+          <span
+            className="text"
+          >
+            Hong Kong
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="sg flag"
+          />
+          <span
+            className="text"
+          >
+            Singapore
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="tw flag"
+          />
+          <span
+            className="text"
+          >
+            Taiwan
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="us flag"
+          />
+          <span
+            className="text"
+          >
+            United States
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="form-field"
+    >
+      <div>
+        Depature Date
+      </div>
+      <div
+        className="no-border"
+      >
+        <div
+          className="SingleDatePicker SingleDatePicker_1 SingleDatePicker__block SingleDatePicker__block_2"
+        >
+          <div>
+            <div
+              className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2 SingleDatePickerInput__block SingleDatePickerInput__block_3"
+            >
+              <div
+                className="DateInput DateInput_1 DateInput__block DateInput__block_2"
+              >
+                <input
+                  aria-describedby="DateInput__screen-reader-message-date_input"
+                  aria-label="Date"
+                  autoComplete="off"
+                  className="DateInput_input DateInput_input_1"
+                  disabled={false}
+                  id="date_input"
+                  name="date_input"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Date"
+                  readOnly={false}
+                  required={false}
+                  type="text"
+                  value="May 20, 2018"
+                />
+                <p
+                  className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+                  id="DateInput__screen-reader-message-date_input"
+                >
+                  Press the down arrow key to interact with the calendar and
+                    select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="form-field"
+    >
+      <div>
+        Return Date
+      </div>
+      <div
+        className="no-border"
+      >
+        <div
+          className="SingleDatePicker SingleDatePicker_1 SingleDatePicker__block SingleDatePicker__block_2"
+        >
+          <div>
+            <div
+              className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2 SingleDatePickerInput__block SingleDatePickerInput__block_3"
+            >
+              <div
+                className="DateInput DateInput_1 DateInput__block DateInput__block_2"
+              >
+                <input
+                  aria-describedby="DateInput__screen-reader-message-date_input"
+                  aria-label="Date"
+                  autoComplete="off"
+                  className="DateInput_input DateInput_input_1"
+                  disabled={false}
+                  id="date_input"
+                  name="date_input"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Date"
+                  readOnly={false}
+                  required={false}
+                  type="text"
+                  value="May 21, 2018"
+                />
+                <p
+                  className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+                  id="DateInput__screen-reader-message-date_input"
+                >
+                  Press the down arrow key to interact with the calendar and
+                    select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      Passengers
+    </div>
+    <div
+      aria-busy={undefined}
+      aria-disabled={undefined}
+      aria-expanded={false}
+      className="ui fluid search selection dropdown form-field"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+      tabIndex={undefined}
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-live="polite"
+        className="text"
+        role="alert"
+      >
+        1
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        aria-multiselectable={undefined}
+        className="menu transition"
+        role="listbox"
+      >
+        <div
+          aria-checked={true}
+          aria-disabled={undefined}
+          aria-selected={true}
+          className="active selected item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            1
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            2
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            3
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            4
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            5
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            6
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            7
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            8
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            9
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": "15px 0",
+          "textAlign": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <button
+        className="ui primary button form-button"
+        disabled={undefined}
+        onClick={[Function]}
+        role="button"
+        tabIndex={undefined}
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`SearchForm snapshot test show search form when isReturn is false 1`] = `
+<div>
+  <form
+    action={undefined}
+    className="ui form"
+    onSubmit={[Function]}
+    style={
+      Object {
+        "textAlign": "left",
+      }
+    }
+  >
+    <div>
+      From
+    </div>
+    <div
+      aria-busy={undefined}
+      aria-disabled={undefined}
+      aria-expanded={false}
+      className="ui fluid search selection dropdown form-field"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+      tabIndex={undefined}
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-live="polite"
+        className="default text"
+        role="alert"
+      >
+        Select 
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        aria-multiselectable={undefined}
+        className="menu transition"
+        role="listbox"
+      >
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={true}
+          className="selected item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="au flag"
+          />
+          <span
+            className="text"
+          >
+            Australia
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="jp flag"
+          />
+          <span
+            className="text"
+          >
+            Japan
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="hk flag"
+          />
+          <span
+            className="text"
+          >
+            Hong Kong
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="sg flag"
+          />
+          <span
+            className="text"
+          >
+            Singapore
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="tw flag"
+          />
+          <span
+            className="text"
+          >
+            Taiwan
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="us flag"
+          />
+          <span
+            className="text"
+          >
+            United States
+          </span>
+        </div>
+      </div>
+    </div>
+    <div>
+      Destination
+    </div>
+    <div
+      aria-busy={undefined}
+      aria-disabled={undefined}
+      aria-expanded={false}
+      className="ui fluid search selection dropdown form-field"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+      tabIndex={undefined}
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-live="polite"
+        className="default text"
+        role="alert"
+      >
+        Destination 
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        aria-multiselectable={undefined}
+        className="menu transition"
+        role="listbox"
+      >
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={true}
+          className="selected item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="au flag"
+          />
+          <span
+            className="text"
+          >
+            Australia
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="jp flag"
+          />
+          <span
+            className="text"
+          >
+            Japan
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="hk flag"
+          />
+          <span
+            className="text"
+          >
+            Hong Kong
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="sg flag"
+          />
+          <span
+            className="text"
+          >
+            Singapore
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="tw flag"
+          />
+          <span
+            className="text"
+          >
+            Taiwan
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <i
+            className="us flag"
+          />
+          <span
+            className="text"
+          >
+            United States
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="form-field"
+    >
+      <div>
+        Depature Date
+      </div>
+      <div
+        className="no-border"
+      >
+        <div
+          className="SingleDatePicker SingleDatePicker_1 SingleDatePicker__block SingleDatePicker__block_2"
+        >
+          <div>
+            <div
+              className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2 SingleDatePickerInput__block SingleDatePickerInput__block_3"
+            >
+              <div
+                className="DateInput DateInput_1 DateInput__block DateInput__block_2"
+              >
+                <input
+                  aria-describedby="DateInput__screen-reader-message-date_input"
+                  aria-label="Date"
+                  autoComplete="off"
+                  className="DateInput_input DateInput_input_1"
+                  disabled={false}
+                  id="date_input"
+                  name="date_input"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Date"
+                  readOnly={false}
+                  required={false}
+                  type="text"
+                  value="May 20, 2018"
+                />
+                <p
+                  className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+                  id="DateInput__screen-reader-message-date_input"
+                >
+                  Press the down arrow key to interact with the calendar and
+                    select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      Passengers
+    </div>
+    <div
+      aria-busy={undefined}
+      aria-disabled={undefined}
+      aria-expanded={false}
+      className="ui fluid search selection dropdown form-field"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      role="combobox"
+      tabIndex={undefined}
+    >
+      <input
+        aria-autocomplete="list"
+        autoComplete="off"
+        className="search"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+        tabIndex={0}
+        type="text"
+        value=""
+      />
+      <div
+        aria-live="polite"
+        className="text"
+        role="alert"
+      >
+        1
+      </div>
+      <i
+        aria-hidden="true"
+        className="dropdown icon"
+        onClick={[Function]}
+      />
+      <div
+        aria-multiselectable={undefined}
+        className="menu transition"
+        role="listbox"
+      >
+        <div
+          aria-checked={true}
+          aria-disabled={undefined}
+          aria-selected={true}
+          className="active selected item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            1
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            2
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            3
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            4
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            5
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            6
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            7
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            8
+          </span>
+        </div>
+        <div
+          aria-checked={false}
+          aria-disabled={undefined}
+          aria-selected={false}
+          className="item"
+          onClick={[Function]}
+          role="option"
+          style={
+            Object {
+              "pointerEvents": "all",
+            }
+          }
+        >
+          <span
+            className="text"
+          >
+            9
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": "15px 0",
+          "textAlign": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <button
+        className="ui primary button form-button"
+        disabled={undefined}
+        onClick={[Function]}
+        role="button"
+        tabIndex={undefined}
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+  </form>
+</div>
+`;

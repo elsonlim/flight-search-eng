@@ -9,11 +9,15 @@ class FlightDetail extends Component {
         let dayFormat = 'am';
         const mins = ("0" + (number % 100)).slice(-2);
         let hours = Math.floor(number/100%100);
-        if(hours > 12) {
-            hours -= 12;
+        
+        if(hours >= 12) {
             dayFormat = 'pm';
         }
 
+        if(hours > 12) {
+            hours -= 12;
+        }
+        
         hours = ("0" + hours).slice(-2);
 
         return `${hours}:${mins}${dayFormat}`;
