@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Form, Button, Dropdown } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import moment from 'moment';
@@ -173,5 +174,10 @@ class SearchForm extends Component {
 const mapStateToProps = state => ({
     isReturn: state.searchType
 });
+
+SearchForm.propTypes = {
+    isReturn: PropTypes.bool.isRequired,
+    updateSearchParams: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, actions)(SearchForm);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import RangeSlider from '../RangeSlider';
 import { Card } from 'semantic-ui-react';
 
@@ -44,5 +45,9 @@ class RefineFlightSearch extends Component {
 const mapStateToProps = state => ({
 	priceRange: state.priceRange
 });
+
+RefineFlightSearch.propTypes = {
+	priceRange: PropTypes.object.isRequired
+}
 
 export default connect(mapStateToProps, Actions)(RefineFlightSearch);

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Button } from 'semantic-ui-react'; 
 import { connect } from 'react-redux';
-
-import AirlineLogo from '../AirlineLogo';
+import PropTypes from 'prop-types';
 import FlightDetail from '../FlightDetail';
 
 import './FlightRow.css';
@@ -30,7 +29,7 @@ class FlightRow extends Component {
     }
     
     render() {
-        const { logo, price } = this.props;
+        const { price } = this.props;
 
         return (
             <div className="flights">
@@ -55,5 +54,11 @@ class FlightRow extends Component {
 const mapStateToProps = state => ({
     numberOfPassengers: state.searchParams.numberOfPassengers
 });
+
+FlightRow.PropTypes = {
+    numberOfPassengers: PropTypes.number.isRequired,
+    departure: PropTypes.object.isRequired,
+    arrival: PropTypes.object.isRequired,
+};
 
 export default connect(mapStateToProps)(FlightRow);

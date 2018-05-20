@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Image } from 'semantic-ui-react'; 
 
 class AirlineLogo extends Component {
-
-    // { origin: 'USA', IATA: 'DL' },
-    // { origin: 'AUS', IATA: 'QAN' },
-    // { origin: 'SGP', IATA: 'SQ' },
-    // { origin: 'HKG', IATA: 'CX' },
-    // { origin: 'JPN', IATA: 'JAL' },
-    // { origin: 'JPN', IATA: 'ANA' },
-    // { origin: 'TWN', IATA: 'BR' },
-    // { origin: 'VNM', IATA: 'EVA' },
 
     getImage(code) {
         const airlineLogo = {
@@ -34,5 +26,9 @@ class AirlineLogo extends Component {
         );
     }
 }
+
+AirlineLogo.propTypes = {
+	airlineLogo: PropTypes.string.isRequired,
+};
 
 export default AirlineLogo;

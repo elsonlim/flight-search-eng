@@ -21,5 +21,5 @@ export default (state = initState, action) => {
             return newSearchState;
         default:
             return state;
-    };
+    }
 };

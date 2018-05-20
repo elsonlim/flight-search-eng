@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { SingleDatePicker } from 'react-dates';
 import moment from 'moment';
 import 'react-dates/initialize';
@@ -9,7 +10,6 @@ class DatePicker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          focused: props.autoFocus,
           date: props.initialDate,
         };
     
@@ -35,8 +35,8 @@ class DatePicker extends Component {
             <div className="no-border">
                 <SingleDatePicker
                     id="date_input"
-                    date={this.state.date}
-                    focused={focused}
+                    date={date}
+                    focused={focused || false}
                     onDateChange={this.onDateChange}
                     onFocusChange={this.onFocusChange}
                     displayFormat={() => moment.localeData().longDateFormat('LL')}
@@ -50,5 +50,10 @@ class DatePicker extends Component {
         );
       }
 }
+
+DatePicker.propTypes = {
+  initialDate: PropTypes.object.isRequired,
+  onDateChange: PropTypes.func.isRequired,
+};
 
 export default DatePicker;

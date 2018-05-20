@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import AirlineLogo from '../AirlineLogo';
 import './FlightDetail.css';
 
@@ -46,21 +47,8 @@ class FlightDetail extends Component {
     }
 }
 
-export default FlightDetail;
+FlightDetail.propTypes = {
+    flightInfo: PropTypes.object.isRequired,
+};
 
-// {
-//     "id": 0,
-//     "IATA": "AAL",
-//     "flightNo": 180,
-//     "from": "USA",
-//     "to": "TWN",
-//     "price": {
-//         "amount": 791,
-//         "currency": "USD"
-//     },
-//     "time": {
-//         "arrival": 2226,
-//         "departure": 2035,
-//         "duration": 111
-//     }
-// }
+export default FlightDetail;

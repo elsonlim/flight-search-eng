@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import FlightRow from '../FlightRow';
 import * as Actions from '../../actions';
-import moment from 'moment';
 import './FlightList.css';
 
 class FlightList extends Component {
@@ -162,22 +162,10 @@ const mapStateToProps = state => ({
     priceRange: state.priceRange,
 });
 
+FlightList.propTypes = {
+    flights: PropTypes.array.isRequired,
+    searchParams: PropTypes.object.isRequired,
+    priceRange: PropTypes.object.isRequired,
+}
+
 export default connect(mapStateToProps, Actions)(FlightList);
-
-
-// {
-//     "id": 0,
-//     "IATA": "DL",
-//     "flightNo": 90,
-//     "from": "USA",
-//     "to": "HKG",
-//     "price": {
-//         "amount": 261,
-//         "currency": "USD"
-//     },
-//     "time": {
-//         "arrival": 609,
-//         "departure": 425,
-//         "duration": 104
-//     }
-// }
