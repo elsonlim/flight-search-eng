@@ -11,7 +11,7 @@ class AirlineLogo extends Component {
         const airlineLogo = {
             DL: 'dl.svg',
             QAN: 'qan.svg',
-            SQ: 'sq.svg',
+            SQ: 'sq.png',
             CX: 'cx.svg',
             JAL: 'jal.svg',
             ANA: 'ana.svg',
@@ -28,7 +28,7 @@ class AirlineLogo extends Component {
     render() {
         return (
             <div>
-                <Image rounded={true} size={'tiny'} src={this.getImage(this.props.airlineLogo)} />
+                <Image rounded={true} size={'small'} src={this.getImage(this.props.airlineLogo)} />
             </div>
         );
     }

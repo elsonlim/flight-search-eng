@@ -19,6 +19,10 @@ class App extends Component {
               <Grid.Column width={1} />
               <Grid.Column width={14} >
                 <div className="App-title">
+                  <img style={{
+                    height: "50px",
+                    width: "50px",
+                  }} src="/plane-logo.png" />
                   Flight Search Engine
                 </div>
               </Grid.Column>

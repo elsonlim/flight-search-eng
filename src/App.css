@@ -17,6 +17,16 @@
 
 .App-title-container {
   text-align: left;
+  
+}
+
+.App-title-container .App-title {
+  display: flex;
+  align-items: center;
+}
+
+.App-title img {
+  margin-right: 15px;
 }
 
 

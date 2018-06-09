@@ -1,6 +1,9 @@
-.flight-details {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
+.flight-details .flight-time {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.flight-details .flight-connection {
+    height: 100%;
+    padding-bottom: 1em;
 }

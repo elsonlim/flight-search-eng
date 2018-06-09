@@ -23,8 +23,6 @@ class FlightRow extends Component {
                     <Grid columns={'equal'}>
                         <Grid.Column>
                             <FlightDetail flightInfo={departure} />
-                        </Grid.Column>
-                        <Grid.Column>
                             <FlightDetail flightInfo={arrival} />
                         </Grid.Column>
                     </Grid>
@@ -50,7 +48,7 @@ class FlightRow extends Component {
                             {this.getFlightDetails()}
                         </Grid.Column>
                         <Grid.Column width={2}>
-                            ${price}
+                            <span className="flight-price">${price}</span>
                         </Grid.Column>
                         <Grid.Column width={4}>
                             <Button content='Select flight' primary /> 

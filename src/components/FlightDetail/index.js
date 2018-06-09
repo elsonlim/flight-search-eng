@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AirlineLogo from '../AirlineLogo';
 import './FlightDetail.css';
+import { Grid } from 'semantic-ui-react'
 
 /**
  * A FlightDetail object
@@ -49,17 +50,32 @@ class FlightDetail extends Component {
         const {arrival, departure} = flightInfo.time;
         return (
             <div className="flight-details" >
-                <div className="logo">
-                    <AirlineLogo airlineLogo={flightInfo.IATA} />
-                </div>
-
-                <div className="details">
-                    <div>{flightInfo.IATA}-{flightInfo.flightNo}</div>
-                    <div>{flightInfo.from} > {flightInfo.to}</div>
-                    <div>Depart: {this._numToTime(departure)}</div>
-                    <div>Arrival: {this._numToTime(arrival)
-                        + this._getDayIncrement(departure, arrival)}</div>
-                </div>
+                <Grid>
+                <Grid.Row verticalAlign={'middle'}>
+                    <Grid.Column width="1" />
+                    <Grid.Column width="4">
+                        <div className="logo">
+                            <AirlineLogo airlineLogo={flightInfo.IATA} />
+                        </div>
+                    </Grid.Column>
+                    <Grid.Column width="3">
+                        <div className="flight-time">{this._numToTime(departure)}</div>
+                        <div className="flight-country">{flightInfo.from}</div>
+                    </Grid.Column>
+                    <Grid.Column width="4">
+                        <div className="flight-connection">
+                            <div className="flight-number">{flightInfo.IATA}{flightInfo.flightNo}</div>
+                            <hr />
+                        </div>                       
+                    </Grid.Column>
+                    <Grid.Column width="3">
+                        <div className="flight-time">
+                            {this._numToTime(arrival) + this._getDayIncrement(departure, arrival)}    
+                        </div>
+                        <div className="flight-country">{flightInfo.to}</div>
+                    </Grid.Column>
+                </Grid.Row>
+                </Grid>
             </div>
         );
     }

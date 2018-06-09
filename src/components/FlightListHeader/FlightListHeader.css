@@ -1,0 +1,16 @@
+.flight-list-header {
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.results-title {
+    font-size: 2em;
+}
+
+.result-date {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: flex-start;
+}

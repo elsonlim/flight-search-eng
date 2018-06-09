@@ -169,6 +169,23 @@ export class FlightList extends Component {
 
         return dates;
     }
+
+    getSearchHeader() {
+        const { from, to } = this.props.searchParams;
+        
+        let headerTitle = " Please enter search values"
+        if (from && to) {
+            headerTitle = `${from} to ${to}`;
+        }
+
+        return (
+            <div className="results-header-container">
+                <div className="results-title">{headerTitle}</div>
+                 <div className="results-date">
+                    {this.getFlightDate(this.props.searchParams.isReturn)}
+            </div>
+        </div>);
+    }
     
     /**
 	 * This method generates a list of flight row details.
@@ -177,12 +194,7 @@ export class FlightList extends Component {
     render() {
         return (
             <div>
-                <div className="results-header-container">
-                    <div className="results-title">Your Results</div>
-                    <div className="results-date">
-                        {this.getFlightDate(this.props.searchParams.isReturn)}
-                    </div>
-                </div>
+                {this.getSearchHeader()}
                 {this.getFlightRows(this.props.searchParams.isReturn)}
             </div>
         );

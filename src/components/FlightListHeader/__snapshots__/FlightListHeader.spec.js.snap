@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlightList snapshot test show FlightListHeader 1`] = `
+<div
+  className="flight-list-header"
+>
+  <div
+    className="results-title"
+  >
+    Your Results
+  </div>
+  <div
+    className="results-date"
+  >
+    <div>
+      Depart: 
+      2018-5-28
+    </div>
+    <div>
+      Return: 
+      2018-5-28
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FlightListHeader snapshot test show FlightListHeader 1`] = `
+<div
+  className="flight-list-header"
+>
+  <div
+    className="results-title"
+  >
+    Your Results
+  </div>
+  <div
+    className="results-date"
+  >
+    <div>
+      Depart: 
+      2018-5-28
+    </div>
+    <div>
+      Return: 
+      2018-5-28
+    </div>
+  </div>
+</div>
+`;

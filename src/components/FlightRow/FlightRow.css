@@ -3,4 +3,15 @@
     padding: 15px;
     border: 1px solid #e9e9e9;
     font-size: 0.8em;
+
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.flights:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flights .flight-price {
+    font-weight: bold;
 }
